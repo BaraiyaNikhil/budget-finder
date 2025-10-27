@@ -18,7 +18,11 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <button className="fixed top-8 right-20" id="theam_btn" onClick={() => setIsLight((i) => !i)}>
+      <button
+        className="fixed top-8 right-20"
+        id="theam_btn"
+        onClick={() => setIsLight((i) => !i)}
+      >
         {isLight ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
