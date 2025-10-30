@@ -1,6 +1,6 @@
 export default function Features() {
   return (
-    <section className="px-10 pt-10 pb-10 md:pb-20">
+    <section id="features" className="dark:dark:bg-slate-100/50 px-10 pt-10 pb-10 md:pb-20">
       <h1 className="text-6xl font-semibold mb-10">Features</h1>
       <div className="w-full flex flex-col md:flex-row">
         <div id="left_part" className="mb-10 md:w-1/3 md:mr-5">

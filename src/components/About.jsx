@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="w-full bg-[#71BC20]/5 px-10 py-10 lg:px-30 lg:py-20">
+    <section id="about_me" className="w-full bg-[#71BC20]/5 px-10 py-10 lg:px-30 lg:py-20">
       <h2 className="text-6xl font-semibold mb-10">About Me</h2>
       <div className="md:flex md:justify-between md:items-center">
         <img

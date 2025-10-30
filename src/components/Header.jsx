@@ -4,13 +4,13 @@ export default function Header() {
       <nav className="dark:bg-white w-full lg:w-1/4 bg-black/5 px-10 py-2.5 md:rounded-3xl">
         <ul className="w-full flex justify-around font-semibold text-2xl">
           <li>
-            <a href="">Home</a>
+            <a href="#hero">Home</a>
           </li>
           <li>
-            <a href="">Learn</a>
+            <a href="#features">Learn</a>
           </li>
           <li>
-            <a href="">About</a>
+            <a href="#about_me">About</a>
           </li>
         </ul>
       </nav>
