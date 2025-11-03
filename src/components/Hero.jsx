@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import BudgetFinderUi from "../assets/imgs/budget_finder_ui.jpg";
 
 export default function Hero() {
@@ -8,7 +9,7 @@ export default function Hero() {
           <h2 className="font-bold text-5xl md:text-6xl mb-5">Find Your Budget instantly</h2>
           <p className="text-xl text-black/60 font-semibold mb-5">The one way stop for budget finding and tracking problems.</p>
           <div id="hero_buttons" className="">
-            <button className="px-2.5 py-2 md:px-3 md:py-2 rounded-xl font-semibold bg-black/90 text-white mr-5">Build budget now</button>
+            <Link to="/budget_maker"><button className="px-2.5 py-2 md:px-3 md:py-2 rounded-xl font-semibold bg-black/90 text-white mr-5">Build budget now</button></Link>
             <a href="#features"><button className="px-2.5 py-2 mb-5 md:px-3 md:py-2 rounded-xl font-semibold border-2 border-black/10">Learn more</button></a>
           </div>
         </div>
