@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import GridBook from "../components/GridBook";
+import Charts from "../components/Charts";
 
 function createEmptyGrid(rows = 10, cols = 5) {
   return Array.from({ length: rows }, () =>
@@ -12,6 +13,7 @@ function BudgetMaker() {
   const [expenseData, setExpenseData] = useState(() =>
     createEmptyGrid(10, columnLabels.length)
   );
+  const [totalBudget, setTotalBudget] = useState();
 
   function handleAddRow() {
     setExpenseData((prev) => [
@@ -25,17 +27,28 @@ function BudgetMaker() {
     setExpenseData((prev) => (prev.length > 0 ? prev.slice(0, -1) : prev));
   }
 
-  console.log(expenseData)
-
   return (
-    <div className="min-h-screen px-5 py-10 box-border bg-[#71BC20]/5">
-      <GridBook
-        columnLabels={columnLabels}
-        data={expenseData}
-        setData={setExpenseData}
-        handleAddRow={handleAddRow}
-        handleDeleteRow={handleDeleteRow}
-      />
+    <div className="min-h-screen px-4 py-8 box-border bg-[#71BC20]/5">
+      {/* center content and constrain width for better responsiveness */}
+      <div className="w-full max-w-6xl mx-auto">
+        <GridBook
+          columnLabels={columnLabels}
+          data={expenseData}
+          setData={setExpenseData}
+          handleAddRow={handleAddRow}
+          handleDeleteRow={handleDeleteRow}
+          totalBudget={totalBudget}
+          setTotalBudget={setTotalBudget}
+        />
+
+        <div className="mt-8">
+          <Charts
+            columnLabels={columnLabels}
+            data={expenseData}
+            totalBudget={totalBudget}
+          />
+        </div>
+      </div>
     </div>
   );
 }

@@ -16,6 +16,7 @@
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.5",
     "react-spreadsheet": "^0.10.1",
+    "recharts": "^3.3.0",
     "tailwindcss": "^4.1.16"
   },
   "devDependencies": {
