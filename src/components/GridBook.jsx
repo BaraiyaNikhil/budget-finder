@@ -34,7 +34,7 @@ export default function GridBook({
       <div id="sheet_wrapper" className="w-full overflow-auto">
         <div
           id="sheet_container"
-          className="overflow-auto text-center rounded-2xl max-w-full min-w-0"
+          className="overflow-auto text-center rounded-2xl max-w-full min-w-48"
         >
         <Spreadsheet
           data={data}

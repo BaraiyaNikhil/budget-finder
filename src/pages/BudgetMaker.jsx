@@ -22,14 +22,12 @@ function BudgetMaker() {
     ]);
   }
 
-  // remove last row safely (no mutation)
   function handleDeleteRow() {
     setExpenseData((prev) => (prev.length > 0 ? prev.slice(0, -1) : prev));
   }
 
   return (
     <div className="min-h-screen px-4 py-8 box-border bg-[#71BC20]/5">
-      {/* center content and constrain width for better responsiveness */}
       <div className="w-full max-w-6xl mx-auto">
         <GridBook
           columnLabels={columnLabels}
@@ -41,7 +39,8 @@ function BudgetMaker() {
           setTotalBudget={setTotalBudget}
         />
 
-        <div className="mt-8">
+        {/* removed h-full here — it can produce zero-height if parent has no explicit height */}
+        <div className="mt-8 w-full">
           <Charts
             columnLabels={columnLabels}
             data={expenseData}
