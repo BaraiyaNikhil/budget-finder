@@ -111,16 +111,16 @@ export default function Charts({
 
       <div className="mt-3 text-sm space-y-1">
         <div>
-          Total Expenses: <span className="font-semibold">{totalExpenses}</span>
+          Total Expenses: <span className="font-semibold">{totalExpenses.toLocaleString()}</span>
         </div>
         <div>
           Total Budget:{" "}
-          <span className="font-semibold">{Number(totalBudget) || 0}</span>
+          <span className="font-semibold">{(Number(totalBudget) || 0).toLocaleString()}</span>
         </div>
         <div>
           Remaining:{" "}
           <span className="font-semibold">
-            {(Number(totalBudget) || 0) - totalExpenses}
+            {((Number(totalBudget) || 0) - totalExpenses).toLocaleString()}
           </span>
         </div>
       </div>

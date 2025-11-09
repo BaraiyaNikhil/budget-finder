@@ -16,7 +16,7 @@ export default function Hero() {
       </div>
       <div id="right_part" className="w-4/5 lg:w-1/2">
         <img
-          className="w-full rounded-xl"
+          className="w-full rounded-xl p-10 bg-slate-100"
           src={BudgetFinderUi}
           alt="budget tracker app ui photo"
         />

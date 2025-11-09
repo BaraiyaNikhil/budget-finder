@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import GridBook from "../components/GridBook";
-import Charts from "../components/Charts";
+import Analysis from "../components/Analysis";
 
 function createEmptyGrid(rows = 10, cols = 5) {
   return Array.from({ length: rows }, () =>
@@ -27,8 +27,19 @@ function BudgetMaker() {
   }
 
   return (
-    <div className="min-h-screen px-4 py-8 box-border bg-[#71BC20]/5">
-      <div className="w-full max-w-6xl mx-auto">
+    <div className="min-h-screen box-border bg-gray-50">
+      {/* Header */}
+      <div className="w-full bg-white shadow-sm px-4 py-3 flex justify-between items-center">
+        <h1 className="text-2xl font-bold text-gray-800">Budget Builder</h1>
+        <button 
+          className="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition-colors"
+          onClick={() => window.location.href = '/'}
+        >
+          End Session
+        </button>
+      </div>
+      
+      <div className="w-full max-w-6xl mx-auto px-4 py-8">
         <GridBook
           columnLabels={columnLabels}
           data={expenseData}
@@ -41,7 +52,7 @@ function BudgetMaker() {
 
         {/* removed h-full here — it can produce zero-height if parent has no explicit height */}
         <div className="mt-8 w-full">
-          <Charts
+          <Analysis
             columnLabels={columnLabels}
             data={expenseData}
             totalBudget={totalBudget}
