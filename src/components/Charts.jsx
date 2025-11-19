@@ -49,11 +49,10 @@ export default function Charts({
   return (
     <div className="w-full bg-white rounded-2xl p-4 shadow">
       <h3 className="text-lg font-semibold mb-2">Expenses vs Budget</h3>
-      <div className="w-full">
-        {/* ensure wrapper has concrete height (tailwind h-64 etc) and cannot collapse */}
+      <div className="w-full min-h-64">
         <div
           className="w-full h-64 sm:h-72 md:h-80 lg:h-96"
-          style={{ minWidth: 0, minHeight: 0 }}
+          style={{ minWidth: 0, minHeight: 0}}
         >
           {/* render chart only after mount and rely on wrapper size */}
           {mounted ? (

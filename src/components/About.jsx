@@ -1,3 +1,5 @@
+import MyImage from "../assets/imgs/my_image.jpg"
+
 export default function About() {
   return (
     <section id="about_me" className="w-full bg-[#71BC20]/5 px-10 py-10 lg:px-30 lg:py-20">
@@ -5,8 +7,9 @@ export default function About() {
       <div className="md:flex md:justify-between md:items-center">
         <img
           className="bg-slate-400 w-86 h-52 md:h-80 rounded-xl mb-3 md:w-2.5/5 lg:w-2/5"
-          src="#"
+          src={MyImage}
           alt="Web owner img"
+          about="Baraiya Nikhil"
         />
         <div className="md:w-2/5">
           <h3 className="text-2xl font-semibold mb-2.5">Introduction</h3>

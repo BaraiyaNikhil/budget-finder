@@ -13,7 +13,7 @@ function BudgetMaker() {
   const [expenseData, setExpenseData] = useState(() =>
     createEmptyGrid(10, columnLabels.length)
   );
-  const [totalBudget, setTotalBudget] = useState();
+  const [totalBudget, setTotalBudget] = useState("");
 
   function handleAddRow() {
     setExpenseData((prev) => [
@@ -27,7 +27,7 @@ function BudgetMaker() {
   }
 
   return (
-    <div className="min-h-screen box-border bg-gray-50">
+    <div className="min-h-screen min-w-screen box-border bg-gray-50">
       {/* Header */}
       <div className="w-full bg-white shadow-sm px-4 py-3 flex justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-800">Budget Builder</h1>

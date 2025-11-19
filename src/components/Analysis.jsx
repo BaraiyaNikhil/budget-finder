@@ -76,7 +76,7 @@ const Analysis = ({ columnLabels, data, totalBudget }) => {
       </div>
 
       {activeTab === 'analysis' ? (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="min-w-full grid grid-cols-1 md:grid-cols-3 gap-6">
           <AnalysisCard
             title="Total Budget"
             value={budgetData.totalBudget}
@@ -94,7 +94,7 @@ const Analysis = ({ columnLabels, data, totalBudget }) => {
           />
         </div>
       ) : (
-        <div className="bg-white/50 rounded-2xl p-6">
+        <div className="min-w-full sm:h-72 md:h-80 lg:h-96 bg-white/50 rounded-2xl p-6">
           <Charts 
             columnLabels={columnLabels}
             data={data}
